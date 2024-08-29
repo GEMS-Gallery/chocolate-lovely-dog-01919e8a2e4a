@@ -1,0 +1,14 @@
+type CatPicture = 
+ record {
+   downvotes: nat;
+   id: nat;
+   upvotes: nat;
+   url: text;
+ };
+service : {
+  downvoteCat: (nat) -> ();
+  getCatPictures: () -> (vec CatPicture) query;
+  getRating: (nat) -> (float64) query;
+  init: () -> ();
+  upvoteCat: (nat) -> ();
+}
